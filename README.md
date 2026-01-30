@@ -25,6 +25,9 @@ Built with **MariaDB** on Hostinger with a **batch refresh** workflow (no cross-
 - DBeaver (extract/import + SQL execution)
 - Tableau (dashboarding/visualization)
 
+## Quick overview
+Read the short story: [Portfolio Story](docs/portfolio_story.md)
+
 ## KPI Snapshot (Multi-store)
 ![KPI Store Summary](docs/screenshots/kpi-store-summary.png)
 
