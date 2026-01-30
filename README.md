@@ -36,8 +36,15 @@ SQL scripts:
 - `sql/views.sql`
 - `sql/tests.sql`
 
+## Repository structure
+- `docs/` — project overview, data dictionary, and test documentation
+- `sql/` — executable SQL (DDL, views, tests)
+
 ## Documentation
-- Foundation overview: `docs/foundation_v1.md`
+- **Foundation overview:** `docs/foundation_v1.md`
+- **Data dictionary:** `docs/data_dictionary.md`
+- **SQL tests:** `docs/tests_sql.md`
+
 
 ## Data sources (not included)
 This repo does **not** include raw WooCommerce databases or CSV exports.
