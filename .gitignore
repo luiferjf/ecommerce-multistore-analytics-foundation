@@ -1,0 +1,29 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local / temp
+*.log
+*.tmp
+
+# Data exports (never commit)
+data/
+exports/
+extracts/
+*.csv
+*.tsv
+*.parquet
+*.xlsx
+
+# DB dumps / backups
+*.sql.gz
+*.dump
+*.bak
+*.zip
+
+# Credentials
+.env
+*.pem
+*.key
