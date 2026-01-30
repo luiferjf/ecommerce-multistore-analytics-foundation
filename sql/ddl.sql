@@ -1,0 +1,6 @@
+-- DDL (tables)
+-- dim_store
+-- dim_date
+-- dim_product
+-- fact_orders
+-- fact_order_items
