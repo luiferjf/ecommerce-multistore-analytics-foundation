@@ -48,11 +48,9 @@ git status
 git add .
 git commit -m "Describe change"
 git push
-
+```
 ---
-
 ## 4) Repo source of truth
-
 - Executable SQL: /sql
 - Documentation: /docs
 - No data exports committed (blocked by .gitignore)
