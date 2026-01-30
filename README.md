@@ -1,3 +1,8 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Database: MariaDB](https://img.shields.io/badge/Database-MariaDB-blue.svg)
+![Model: Star Schema](https://img.shields.io/badge/Model-Star%20Schema-purple.svg)
+![Privacy: No PII](https://img.shields.io/badge/Privacy-No%20PII-brightgreen.svg)
+
 # Ecommerce Multistore Analytics Foundation (MariaDB)
 
 A portfolio project that consolidates **4 historical WooCommerce stores** into a single **analytics database** and delivers a clean **star schema + KPI views + tests** ready for BI (Tableau).  
