@@ -39,6 +39,12 @@ Read the short story: [Portfolio Story](docs/portfolio_story.md)
 - Built a **star schema** (dims/facts) + KPI views for store/day/product mix reporting.
 - Validated data quality with **SQL tests** (uniqueness, FK/orphans, sanity, date coverage, KPI reconciliation).
 
+## Results (dataset coverage)
+- Stores: 4 (RBN, PA, VIC, NEB)
+- Orders: 5,651 total
+- Line items: 9,154 total
+- Date range (UTC): 2018-12-08 → 2023-03-30
+
 ## How to use (high-level)
 1) Load CSVs into staging: `stg_orders`, `stg_order_items`
 2) Build star schema tables (DDL)
