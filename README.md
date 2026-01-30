@@ -28,6 +28,9 @@ Built with **MariaDB** on Hostinger with a **batch refresh** workflow (no cross-
 ## KPI Snapshot (Multi-store)
 ![KPI Store Summary](docs/screenshots/kpi-store-summary.png)
 
+## Data model (Star Schema)
+![Star Schema](docs/screenshots/erd-diagram.png)
+
 ## Project highlights
 - Consolidated **4 WooCommerce stores** into a single analytics DB (Hostinger MariaDB) using a batch refresh workflow (no cross-DB queries).
 - Built a **star schema** (dims/facts) + KPI views for store/day/product mix reporting.
