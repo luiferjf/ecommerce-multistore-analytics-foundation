@@ -63,11 +63,14 @@ Grains, keys, and KPI-related fields are included. No customer PII is stored or 
 | Column | Type | Description |
 |---|---|---|
 | store_key | int | Surrogate key |
-| store_code | varchar | Store code |
+| store_code | varchar | Store code (RBN/PA/VIC/NEB) |
 | store_name | varchar | Friendly name |
-| currency | varchar | Currency code (e.g., USD) |
-| timezone | varchar | Reporting timezone (for reference) |
+| currency_code | char(3) | Currency code (e.g., USD) |
+| timezone_iana | varchar | Timezone reference (IANA format, e.g., UTC) |
+| src_db | varchar | Source DB identifier (traceability) |
 | notes | varchar | Free-form notes |
+| created_at | timestamp | Row creation time |
+| updated_at | timestamp | Row last update time |
 
 ---
 
