@@ -93,12 +93,14 @@ Grains, keys, and KPI-related fields are included. No customer PII is stored or 
 | iso_week | int | ISO week number |
 | iso_yearweek | int | ISO year*100 + ISO week |
 | week_start_date | date | Monday of the ISO week |
+| week_end_date | date | Sunday of the ISO week |
+| created_at | timestamp | Row creation time |
 
 ---
 
-### `dim_product` (v1 minimal)
+### `dim_product` (v1)
 **Primary key:** `product_key`  
-**Natural key:** `(store_key, product_id, variation_id, sku)`
+**Natural key (recommended):** `(store_key, product_id, variation_id, sku)`
 
 | Column | Type | Description |
 |---|---|---|
@@ -108,8 +110,12 @@ Grains, keys, and KPI-related fields are included. No customer PII is stored or 
 | product_id | bigint | Product id |
 | variation_id | bigint | Variation id |
 | sku | varchar | SKU (if present) |
+| product_name | varchar | Product name (best-effort; may be null) |
+| category | varchar | Category (best-effort; may be null) |
+| created_at | timestamp | Row creation time |
+| updated_at | timestamp | Row last update time |
 
-> Notes: v1 intentionally avoids category/attributes until a clean source is defined.
+> Notes: v1 keeps product attributes minimal. If category/name quality varies by store, treat as “best-effort”.
 
 ---
 
@@ -129,6 +135,8 @@ Grains, keys, and KPI-related fields are included. No customer PII is stored or 
 | status_raw | varchar | Raw status |
 | status_canonical | varchar | Canonical status bucket (paid/pending/cancelled/refunded/other) |
 | net_revenue | decimal | Net revenue per order |
+| src_db | varchar | Source DB identifier (traceability) |
+| loaded_at | timestamp | Load timestamp into analytics DB |
 
 ---
 
@@ -145,8 +153,13 @@ Grains, keys, and KPI-related fields are included. No customer PII is stored or 
 | order_created_utc | datetime | Timestamp inherited from order (UTC) |
 | date_key | int | FK to `dim_date` |
 | product_key | bigint | FK to `dim_product` |
+| product_id | bigint | Source product id (helper) |
+| variation_id | bigint | Source variation id (helper) |
+| sku | varchar | SKU (helper) |
 | quantity | int | Units |
 | line_total | decimal | Line revenue |
+| src_db | varchar | Source DB identifier (traceability) |
+| loaded_at | timestamp | Load timestamp into analytics DB |
 
 ---
 
@@ -175,6 +188,7 @@ Includes `dim_date` fields for reporting plus daily KPIs:
 ### `vw_revenue_mix_store` (grain: 1 row = 1 store x 1 product)
 | Column | Description |
 |---|---|
+| store_code, store_name | Store identifiers |
 | product_id, variation_id, sku | Product identifiers |
 | units | Units sold for the product |
 | item_revenue | SUM(line_total) |
