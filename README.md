@@ -25,6 +25,9 @@ Built with **MariaDB** on Hostinger with a **batch refresh** workflow (no cross-
 - DBeaver (extract/import + SQL execution)
 - Tableau (dashboarding/visualization)
 
+## KPI Snapshot (Multi-store)
+![KPI Store Summary](docs/screenshots/kpi-store-summary.png)
+
 ## How to use (high-level)
 1) Load CSVs into staging: `stg_orders`, `stg_order_items`
 2) Build star schema tables (DDL)
