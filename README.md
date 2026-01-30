@@ -64,7 +64,7 @@ SQL scripts:
 - **Foundation overview:** `docs/foundation_v1.md`
 - **Data dictionary:** `docs/data_dictionary.md`
 - **SQL tests:** `docs/tests_sql.md`
-
+- **Rebuild guide:** `docs/how_to_rebuild.md`
 
 ## Data sources (not included)
 This repo does **not** include raw WooCommerce databases or CSV exports.
